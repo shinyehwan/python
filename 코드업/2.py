@@ -25,13 +25,17 @@
 # print(a)
 
 # 6014
-a = input()
-a = float(a)
-print(a)
-print(a)
-print(a)
+# a = input()
+# a = float(a)
+# print(a)
+# print(a)
+# print(a)
 
 # 6015
-a, b = input.split()
-print(a)
-print(b)
+# a, b = input.split()
+# print(a)
+# print(b)
+
+# 6016
+a, b = input().split() 
+print(b, a)
