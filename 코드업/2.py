@@ -37,5 +37,21 @@
 # print(b)
 
 # 6016
-a, b = input().split() 
-print(b, a)
+# a, b = input().split() 
+# print(b, a)
+
+# 6017
+# s = input()
+# print(s, s, s)
+
+# 6018
+# a, b = input().split(':')
+# print(a, b, sep=':')
+
+# 6019
+# a, b, c = input().split('.')
+# print(c,b,a, sep='-')
+
+# 6020
+a,b = input().split('-')
+print(a,b,sep='')
