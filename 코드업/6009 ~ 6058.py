@@ -112,3 +112,63 @@
 # a = int(input())
 # print(2*a)
 # print(a<<1)
+
+# 6047
+# a, b = map(int, input().split())
+# print(a << b)
+
+# 6048
+# a, b = map(int, input().split())
+# print(a<b)
+
+# 6049
+# a, b = map(int, input().split())
+# print(a==b)
+
+# 6050
+# a, b = map(int, input().split())
+# print(b>=a)
+
+# 6051
+# a, b = map(int, input().split())
+# print(a!=b)
+
+# 6052
+# n = int(input())
+# print(bool(n))
+
+# 6053
+# n = int(input())
+# print(not bool(n))
+# n = bool(int(input()))
+# print(not n)
+
+# 6054
+# a, b = map(int, input().split())
+# print(bool(a) and bool(b))
+
+# 6055
+# a, b = map(int, input().split())
+# print(bool(a) or bool(b))
+
+# 6056
+# a, b = map(int, input().split())
+# print(bool(a) != bool(b))
+
+# c = bool(a)
+# d = bool(b)
+# print((c and not(d)) or (not(c) and not(d)))
+
+# 6057
+# a, b = map(int, input().split())
+# print(bool(a) == bool(b))
+
+# c = bool(a)
+# d = bool(d)
+# print((not c and not d) or (c and d))
+
+# 6058
+a, b = map(int, input().split())
+c = bool(a)
+d = bool(b)
+print(not c and not d)
