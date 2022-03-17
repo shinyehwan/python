@@ -94,10 +94,3 @@
 #     if i%3==0:
 #         continue
 #     print(i, end=' ')
-
-# 6088
-# a,d,n = map(int, input().split())
-
-# for i in range(a,n+1,d):
-    
-
