@@ -96,8 +96,8 @@
 #     print(i, end=' ')
 
 # 6088
-a,d,n = map(int, input().split())
+# a,d,n = map(int, input().split())
 
-for i in range(a,n+1,d):
+# for i in range(a,n+1,d):
     
 
