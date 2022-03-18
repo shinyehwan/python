@@ -97,5 +97,37 @@
 
 # 깃허브 푸쉬하는 과정에서 오류가 났음 깃허브에 있는 리포지토리가 로컬에서 사라져서 그런다.
 # 문제해결하는데 시간이 좀 걸림, 강제로 푸쉬함
-# 6088
 
+# 6088
+# a,d,n = map(int, input().split())
+
+# for i in range(2,n+1):
+#     a+=d
+# print(a)
+
+# 6089
+# a,r,n = map(int, input().split())
+
+# for i in range(2,n+1):
+#     a*=r
+# print(a)
+
+# 6090
+# a,m,d,n = map(int, input().split())
+
+# for i in range(2,n+1):
+#     a = a*m+d
+
+# print(a)
+
+# 6091
+a,b,c = map(int, input().split())
+d = 1
+
+while True:
+    d+=1
+    if d%a == 0 and d%b == 0 and d%c == 0:
+        print(d)
+        break
+        
+    
