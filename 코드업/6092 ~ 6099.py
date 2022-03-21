@@ -50,21 +50,21 @@
 # print(min)
 
 # 6095
-d=[]    #대괄호 [ ] 를 이용해 아무것도 없는 빈 리스트 만들기 
-for i in range(20):
-    d.append([])    #리스트 안에 다른 리스트 추가해 넣기 
-    for j in range(20):
-        d[i].append(0)  #리스트 안에 들어있는 리스트 안에 0 추가해 넣기 
+# d=[]    #대괄호 [ ] 를 이용해 아무것도 없는 빈 리스트 만들기 
+# for i in range(20):
+#     d.append([])    #리스트 안에 다른 리스트 추가해 넣기 
+#     for j in range(20):
+#         d[i].append(0)  #리스트 안에 들어있는 리스트 안에 0 추가해 넣기 
 
-n = int(input())
-for i in range(n):
-    x,y = map(int, input().split())
-    d[x][y] = 1
+# n = int(input())
+# for i in range(n):
+#     x,y = map(int, input().split())
+#     d[x][y] = 1
 
-for i in range(20):
-    for j in range(20):
-        print(d[i][j], end=' ') #공백을 두고 한 줄로 출력 
-    print()
+# for i in range(20):
+#     for j in range(20):
+#         print(d[i][j], end=' ') #공백을 두고 한 줄로 출력 
+#   print()
 
 # ... 
 # d=[]
@@ -81,3 +81,39 @@ for i in range(20):
 # d = [[0 for j in range(20)] for i in range(20)] 
 
 # 이러한 리스트 생성 방식을 List Comprehensions 라고 한다. 
+
+# 6096
+# 19*19 크기, 범위 설정 오류가 있었다.
+d = []
+for i in range(19):
+    d.append([])
+    for j in range(19):
+        d[i].append(0)
+
+for i in range(19): 
+    d[i] = list(map(int, input().split()))
+
+
+n = int(input())
+
+for i in range(n):
+    x,y = map(int, input().split())
+
+    for j in range(19):
+        if d[j][y-1] == 0:
+            d[j][y-1] = 1
+        else:
+            d[j][y-1] = 0
+
+        if d[x-1][j] == 0:
+            d[x-1][j] = 1
+        else:
+            d[x-1][j] = 0
+
+for i in range(19) : 
+    for j in range(19) : 
+        print(d[i][j], end=' ') 
+    print()
+
+
+
