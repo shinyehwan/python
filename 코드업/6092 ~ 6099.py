@@ -84,35 +84,62 @@
 
 # 6096
 # 19*19 크기, 범위 설정 오류가 있었다.
-d = []
-for i in range(19):
-    d.append([])
-    for j in range(19):
-        d[i].append(0)
+# d = []
+# for i in range(19):
+#     d.append([])
+#     for j in range(19):
+#         d[i].append(0)
 
-for i in range(19): 
-    d[i] = list(map(int, input().split()))
+# for i in range(19): 
+#     d[i] = list(map(int, input().split()))
 
+
+# n = int(input())
+
+# for i in range(n):
+#     x,y = map(int, input().split())
+
+#     for j in range(19):
+#         if d[j][y-1] == 0:
+#             d[j][y-1] = 1
+#         else:
+#             d[j][y-1] = 0
+
+#         if d[x-1][j] == 0:
+#             d[x-1][j] = 1
+#         else:
+#             d[x-1][j] = 0
+
+# for i in range(19) : 
+#     for j in range(19) : 
+#         print(d[i][j], end=' ') 
+#     print()
+
+# 6097
+k = []
+a,b = map(int, input().split())
+
+for i in range(a):
+    k.append([])
+    for j in range(b):
+        k[i].append(0)
 
 n = int(input())
-
+ 
 for i in range(n):
-    x,y = map(int, input().split())
+    l,d,x,y = map(int,input().split())
 
-    for j in range(19):
-        if d[j][y-1] == 0:
-            d[j][y-1] = 1
-        else:
-            d[j][y-1] = 0
+    if d == 0:
+        for j in range(l):
+            k[x-1][y-1+j]=1
+    
+    else:
+        for j in range(l):
+            k[x-1+j][y-1]=1
 
-        if d[x-1][j] == 0:
-            d[x-1][j] = 1
-        else:
-            d[x-1][j] = 0
-
-for i in range(19) : 
-    for j in range(19) : 
-        print(d[i][j], end=' ') 
+for i in range(a):
+    for j in range(b):
+        print(k[i][j], end = ' ')
     print()
 
 
