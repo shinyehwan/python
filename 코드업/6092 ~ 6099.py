@@ -145,6 +145,7 @@
 # 6098
 
 d = []
+
 for i in range(10):
     d.append([])
     for j in range(10):
@@ -161,20 +162,26 @@ while True:
     elif d[x][y] == 2:
         d[x][y] = 9
         break
-
-    if d[x+1][y] == 1 and d[x][y+1] == 1:
+        
+    
+    if d[x][y+1] == 1 and d[x+1][y] == 1:
         break
 
     if d[x][y+1] != 1:
-        y = y+1
+        y = y + 1 
+
     elif d[x+1][y] != 1:
-        x = x+1
+        x = x + 1
+
 
 for i in range(10):
     for j in range(10):
-        print(d[i][j], end = ' ')
+        print(d[i][j], end =' ')
     print()
 
-        
+
+
+
+    
 
 
