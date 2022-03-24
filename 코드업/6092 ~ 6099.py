@@ -116,31 +116,65 @@
 #     print()
 
 # 6097
-k = []
-a,b = map(int, input().split())
+# k = []
+# a,b = map(int, input().split())
 
-for i in range(a):
-    k.append([])
-    for j in range(b):
-        k[i].append(0)
+# for i in range(a):
+#     k.append([])
+#     for j in range(b):
+#         k[i].append(0)
 
-n = int(input())
+# n = int(input())
  
-for i in range(n):
-    l,d,x,y = map(int,input().split())
+# for i in range(n):
+#     l,d,x,y = map(int,input().split())
 
-    if d == 0:
-        for j in range(l):
-            k[x-1][y-1+j]=1
+#     if d == 0:
+#         for j in range(l):
+#             k[x-1][y-1+j]=1
     
-    else:
-        for j in range(l):
-            k[x-1+j][y-1]=1
+#     else:
+#         for j in range(l):
+#             k[x-1+j][y-1]=1
 
-for i in range(a):
-    for j in range(b):
-        print(k[i][j], end = ' ')
+# for i in range(a):
+#     for j in range(b):
+#         print(k[i][j], end = ' ')
+#     print()
+
+# 6098
+
+d = []
+for i in range(10):
+    d.append([])
+    for j in range(10):
+        d[i].append(0)
+
+for i in range(10):
+    d[i] = list(map(int, input().split()))
+
+x, y = 1, 1
+
+while True:
+    if d[x][y] == 0:
+        d[x][y] = 9
+    elif d[x][y] == 2:
+        d[x][y] = 9
+        break
+
+    if d[x+1][y] == 1 and d[x][y+1] == 1:
+        break
+
+    if d[x][y+1] != 1:
+        y = y+1
+    elif d[x+1][y] != 1:
+        x = x+1
+
+for i in range(10):
+    for j in range(10):
+        print(d[i][j], end = ' ')
     print()
 
+        
 
 
